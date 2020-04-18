@@ -11,7 +11,7 @@ const patientSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    //include array of ids of all comments in this post schema itself
+    //include array of ids of all reports in this patient schema itself
     reports: [
       {
         type: mongoose.Schema.Types.ObjectId,
