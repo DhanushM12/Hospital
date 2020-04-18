@@ -36,7 +36,7 @@ module.exports.create = async function (req, res) {
 
 //all reports
 module.exports.reports = async function (req, res) {
-  let posts = await Patient.find({})
+  let posts = await Patient.findById(req.body.reports)
     .sort("-createdAt")
     .populate("reports")
     .populate({
